@@ -1,0 +1,7 @@
+.git
+*.dump
+*.backup
+*.log
+.env
+.env.*
+!.env.example

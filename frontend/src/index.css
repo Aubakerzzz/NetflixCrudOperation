@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+
+:root {
+  font-family: "Inter", Arial, sans-serif;
+  color: #f5f5f5;
+  background: #111111;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: #111111;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 6%;
+  background: #080808;
+  border-bottom: 1px solid #282828;
+}
+
+.brand {
+  color: #e50914;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-decoration: none;
+}
+
+.admin-label {
+  color: #c5c5c5;
+  font-size: 14px;
+}
+
+.container {
+  width: min(1400px, 90%);
+  margin: 0 auto;
+}
+
+.hero {
+  padding: 60px 0 35px;
+}
+
+.eyebrow {
+  color: #e50914;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  margin: 14px 0;
+  font-size: clamp(30px, 5vw, 48px);
+  letter-spacing: -1.5px;
+}
+
+.hero-description {
+  color: #aaa;
+  line-height: 1.7;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 230px;
+  padding: 14px 16px;
+  color: white;
+  background: #222;
+  border: 1px solid #383838;
+  border-radius: 6px;
+  outline: none;
+}
+
+.search-input:focus,
+.movie-form input:focus,
+.movie-form textarea:focus {
+  border-color: #e50914;
+}
+
+.primary-button,
+.secondary-button,
+.edit-button,
+.delete-button {
+  padding: 11px 16px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: opacity 0.2s ease;
+}
+
+.primary-button {
+  color: white;
+  background: #e50914;
+}
+
+.secondary-button {
+  color: white;
+  background: #444;
+}
+
+.primary-button:hover,
+.secondary-button:hover,
+.edit-button:hover,
+.delete-button:hover {
+  opacity: 0.8;
+}
+
+.form-section {
+  margin: 20px 0 40px;
+}
+
+.movie-form {
+  max-width: 760px;
+  padding: 28px;
+  background: #1b1b1b;
+  border: 1px solid #333;
+  border-radius: 10px;
+}
+
+.movie-form h2 {
+  margin: 0 0 24px;
+}
+
+.movie-form label {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 18px;
+  color: #ddd;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.movie-form input,
+.movie-form textarea {
+  width: 100%;
+  padding: 12px;
+  color: white;
+  background: #111;
+  border: 1px solid #393939;
+  border-radius: 5px;
+  outline: none;
+}
+
+.movie-form textarea {
+  resize: vertical;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.library-section {
+  padding: 25px 0 60px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-size: 23px;
+}
+
+.section-heading span {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+}
+
+.movie-card {
+  overflow: hidden;
+  background: #1b1b1b;
+  border: 1px solid #292929;
+  border-radius: 8px;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-4px);
+  border-color: #555;
+}
+
+.movie-poster {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  background: #252525;
+}
+
+.movie-info {
+  padding: 16px;
+}
+
+.movie-info h3 {
+  margin: 0 0 12px;
+  font-size: 17px;
+}
+
+.movie-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  color: #aaa;
+  font-size: 11px;
+}
+
+.rating {
+  color: #f5c518;
+}
+
+.movie-info p {
+  min-height: 54px;
+  color: #bbb;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.card-actions button {
+  flex: 1;
+  font-size: 12px;
+}
+
+.edit-button {
+  color: white;
+  background: #333;
+}
+
+.delete-button {
+  color: white;
+  background: #8f1017;
+}
+
+.empty-state {
+  padding: 50px 15px;
+  color: #aaa;
+  text-align: center;
+  border: 1px dashed #444;
+  border-radius: 8px;
+}
+
+.empty-state h2 {
+  color: white;
+}
+
+.footer {
+  padding: 25px;
+  color: #777;
+  font-size: 12px;
+  text-align: center;
+  border-top: 1px solid #292929;
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 18px 5%;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .hero {
+    padding-top: 40px;
+  }
+
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .movie-form {
+    padding: 20px;
+  }
+
+  .movie-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+
+  .movie-info {
+    padding: 12px;
+  }
+
+  .movie-info h3 {
+    font-size: 14px;
+  }
+
+  .movie-meta {
+    gap: 5px;
+  }
+
+  .movie-info p {
+    font-size: 11px;
+  }
+
+  .card-actions {
+    flex-direction: column;
+  }
+
+  .add-button {
+    width: 100%;
+  }
+}
