@@ -1,0 +1,8 @@
+aws_region       = "ap-south-1"
+app_name         = "netflix-clone"
+environment      = "production"
+dockerhub_username = "Aubakerzzz"
+# Set immutable tags to the current Git commit SHA during deployment if desired.
+frontend_image_tag = "latest"
+backend_image_tag  = "latest"
+db_name           = "netflix_clone"
