@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: netflix-config
+data:
+  POSTGRES_DB: "netflix_clone"
+  POSTGRES_USER: "postgres"
+  DB_HOST: "db"
+  DB_PORT: "5432"
+  FLASK_DEBUG: "0"
+  FRONTEND_ORIGIN: "http://localhost:8080"
